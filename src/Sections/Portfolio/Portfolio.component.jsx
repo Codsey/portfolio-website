@@ -1,21 +1,14 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import {
-  PortfolioCard,
-  PortfolioCardWrapper,
-  PortfolioCategory,
-  PortfolioContent,
-  PortfolioContentCategory,
-  PortfolioContentCategoryList,
-  PortfolioContentTitle,
   PortfolioSubtitle,
-  PortfolioThumbnail,
   PortfolioTitle,
   PortfolioTitleWrapper,
   PortfolioWrapper,
 } from "./Portfolio.styles";
 
 import ComingSoonImage from "../../assets/images/coming-soon.jpg";
+import PortfolioCardComponent from "../../components/PortfolioCard/PortfolioCard.component";
 
 const Portfolio = () => {
   return (
@@ -31,23 +24,25 @@ const Portfolio = () => {
         </Row>
         <Row>
           <Col lg={6} xl={4} md={6}>
-            <PortfolioCardWrapper>
-              <PortfolioCard>
-                <div className="inner">
-                  <PortfolioThumbnail>
-                    <img src={ComingSoonImage} alt="coming soon" />
-                  </PortfolioThumbnail>
-                  <PortfolioContent>
-                    <PortfolioContentCategory>
-                      <PortfolioContentCategoryList>
-                        <PortfolioCategory>Web Development</PortfolioCategory>
-                      </PortfolioContentCategoryList>
-                    </PortfolioContentCategory>
-                    <PortfolioContentTitle>Coming Soon</PortfolioContentTitle>
-                  </PortfolioContent>
-                </div>
-              </PortfolioCard>
-            </PortfolioCardWrapper>
+            <PortfolioCardComponent
+              category={"Web Development"}
+              title={"Coming Soon"}
+              imageUrl={ComingSoonImage}
+            />
+          </Col>
+          <Col lg={6} xl={4} md={6}>
+            <PortfolioCardComponent
+              category={"Web Development"}
+              title={"Coming Soon"}
+              imageUrl={ComingSoonImage}
+            />
+          </Col>
+          <Col lg={6} xl={4} md={6}>
+            <PortfolioCardComponent
+              category={"Web Development"}
+              title={"Coming Soon"}
+              imageUrl={ComingSoonImage}
+            />
           </Col>
         </Row>
       </Container>
