@@ -124,7 +124,7 @@ const Contact = () => {
                   </Col>
                   <Col lg={12}>
                     <FormGroup>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>Your Message</FormLabel>
                       <FormTextarea
                         name="contact-message"
                         cols="30"
