@@ -30,6 +30,14 @@ export const FeaturesCard = styled.div`
   &:hover::before {
     opacity: 1;
   }
+
+  @media only screen and (max-width: 767px) {
+    padding: 30px 30px 30px 30px;
+  }
+
+  @media only screen and (max-width: 479px) {
+    padding: 20px;
+  }
 `;
 
 export const FeaturesCardWrapper = styled.div`

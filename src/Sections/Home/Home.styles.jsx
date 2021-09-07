@@ -12,8 +12,6 @@ export const HomeWrapper = styled.div`
 `;
 
 export const HomeRow = styled(Row)`
-  margin-left: -30px;
-  margin-right: -30px;
   -ms-flex-align: center !important;
   -webkit-box-align: center !important;
   -webkit-align-items: center !important;
@@ -31,6 +29,10 @@ export const HomeContent = styled.div`
 
 export const HomeContentInner = styled.div`
   margin-bottom: 142px;
+
+  @media only screen and (max-width: 1199px) {
+    margin-bottom: 40px !important;
+  }
 `;
 
 export const HomeSubtitle = styled.span`
@@ -42,6 +44,10 @@ export const HomeSubtitle = styled.span`
   font-weight: 500;
   display: block;
   margin-bottom: 20px;
+
+  @media only screen and (max-width: 479px) {
+    letter-spacing: 1px;
+  }
 `;
 
 export const HomeTitle = styled.h1`
@@ -51,6 +57,16 @@ export const HomeTitle = styled.h1`
   line-height: 75px;
   margin-bottom: 22px;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  @media only screen and (max-width: 479px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 `;
 
 export const HomeTitleName = styled.span`
@@ -63,6 +79,11 @@ export const HomeParagraph = styled.p`
   color: #c4cfde;
   padding-right: 16%;
   opacity: 0.9;
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
 `;
 
 export const SocialTitle = styled.span`

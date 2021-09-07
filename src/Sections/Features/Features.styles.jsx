@@ -32,6 +32,16 @@ export const FeaturesSubtitle = styled.span`
   letter-spacing: 1px;
   display: block;
   line-height: 14px;
+
+  @media only screen and (max-width: 575px) {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 479px) {
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
 `;
 
 export const FeaturesTitle = styled.h2`
@@ -41,6 +51,16 @@ export const FeaturesTitle = styled.h2`
   color: #c4cfde;
   margin-top: 15px;
   margin-bottom: 0;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width: 575px) {
+    text-align: center;
+    margin: 0;
+    font-size: 34px;
+  }
 `;
 
 export const LayoutIcon = styled(LayoutIconSvg)`
