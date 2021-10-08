@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   DefaultHeader,
   HeaderWrapper,
@@ -11,10 +11,16 @@ import {
   MenuLink,
   HeaderRight,
   HeaderRightButton,
+  HeaderHambergerMenuButton,
 } from "./Header.styles";
+
 import { Col } from "reactstrap";
 
+import { ReactComponent as HambergerIconSvg } from "../../assets/icons/hamberger-icon.svg";
+import MobileHeader from "../MobileHeader/MobileHeader.component";
+
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <DefaultHeader>
       <HeaderWrapper>
@@ -61,10 +67,17 @@ const Header = () => {
               <HeaderRightButton>
                 <span>HIRE ME</span>
               </HeaderRightButton>
+              <HeaderHambergerMenuButton
+                className={open ? "opened" : ""}
+                onClick={() => setOpen((prevState) => !prevState)}
+              >
+                <HambergerIconSvg />
+              </HeaderHambergerMenuButton>
             </HeaderRight>
           </HeaderCenter>
         </Col>
       </HeaderWrapper>
+      <MobileHeader open={open} />
     </DefaultHeader>
   );
 };

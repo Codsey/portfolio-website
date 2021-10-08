@@ -17,7 +17,7 @@ const Footer = () => {
           <Col lg={12}>
             <FooterArea>
               <FooterLogo>
-                <img src={CodseyLogo} />
+                <img src={CodseyLogo} alt="logo"/>
               </FooterLogo>
               <FooterDescription>
                 © {new Date().getFullYear()}. All rights reserved by Codsey
